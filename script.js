@@ -13,8 +13,13 @@ createApp({
         sayhi($time, $name) {
             return "Good" + " " + $time + "," + "  " + $name;
 
+        },
+        printmyname(){
+            console.log("amr");
         }
     },
+
+   
 
 }).mount("#app-root")
 
@@ -37,3 +42,15 @@ createApp({
     },
 
 }).mount("#event")
+
+
+createApp({
+
+    data() {
+        return {
+            name:"Amr"
+        };
+    },
+
+}).mount("#binded")
+

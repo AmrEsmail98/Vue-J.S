@@ -17,14 +17,20 @@
         <h3> my age is {{age}} </h3>
         <h4>{{sayhi("Moring","Amr")}}</h4>
         <a :href="link">Google</a>
+        <input type="text" @keyup="printmyname" />
+    </div>
+    <div id="event">
+        <h1>Number is equal {{number}}</h1>
+        <button v-on:click="functionIncress"> incress</button>
+        <button v-on:click="functionDecress"> decress</button>
     </div>
 
-   
-    <div id="event">
-         
-        <h1>Number is equal {{number}}</h1>
-        <button  v-on:click="functionIncress"> incress</button>
-        <button  v-on:click="functionDecress"> decress</button>
+<br>
+    <div id="binded">
+        <label for="textInput">{{name}}</label>
+        <input type="text" v-model="name" name="textInput" id="textInput"/>
+
+        <button @click="name = 'Amr'">change name to Amr</button>
 
     </div>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
