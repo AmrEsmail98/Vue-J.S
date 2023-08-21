@@ -33,6 +33,28 @@
         <button @click="name = 'Amr'">change name to Amr</button>
 
     </div>
+
+    <br>
+    <div id="new-form">
+
+        <form action="" @submit.prevent="sentDate">
+
+            <label for="name">Name:</label>
+            <input type="text" v-model="newUser.name" name="name" />
+
+            <label for="email">Email</label>
+            <input type="text" v-model="newUser.email" name="email" />
+            <label for="age">Age</label>
+            <input type="text" v-model="newUser.age" name="age" />
+
+
+            <label for="password">Password</label>
+            <input type="text" v-model="newUser.password" name="password" />
+
+            <button type="submit">Submit</button>
+        </form>
+
+    </div>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="./script.js"></script>
 </body>

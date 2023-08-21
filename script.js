@@ -14,12 +14,12 @@ createApp({
             return "Good" + " " + $time + "," + "  " + $name;
 
         },
-        printmyname(){
+        printmyname() {
             console.log("amr");
         }
     },
 
-   
+
 
 }).mount("#app-root")
 
@@ -28,17 +28,17 @@ createApp({
 
     data() {
         return {
-            number:0
+            number: 0
         }
     },
     methods: {
-        functionIncress(){
-        this.number ++;  
-          },
-          functionDecress(){
-            this.number --;  
-              }
-    
+        functionIncress() {
+            this.number++;
+        },
+        functionDecress() {
+            this.number--;
+        }
+
     },
 
 }).mount("#event")
@@ -48,9 +48,34 @@ createApp({
 
     data() {
         return {
-            name:"Amr"
+            name: "Amr"
         };
     },
 
 }).mount("#binded")
 
+
+createApp({
+
+    data() {
+        return {
+            newUser: {
+                IsActive: true,
+                age: "",
+                name: "",
+                email: "",
+                password: "",
+            },
+            myArr:[
+                {name:"ahmed",age:20},
+                {name:"mohamed",age:22},
+            ]
+        };
+    },
+    methods: {
+        sentDate() {
+            console.log(this.newUser);
+            console.log(this.myArr);
+        },
+    },
+}).mount("#new-form");
